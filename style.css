@@ -1,0 +1,892 @@
+body{
+	font-family: "Open sans";		
+	margin:0;
+	overflow-x: hidden;
+
+
+	
+}
+*, *:before, *:after{
+	box-sizing: border-box;
+}
+a, a:visited, span{
+	color:#fcf9f9;
+	transition: 1s;
+	text-decoration: none;
+}
+
+#id2, #id3{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top:10%;
+	color:white;
+	display: none;
+
+}
+.header{
+
+	top:0;
+	left:10%;
+	height:100%;
+	position: absolute;
+	
+	background: url(https://altwall.net/img/celldweller/12_19201080.jpg) no-repeat;
+	background-size: cover;
+	background-position: top;
+	background-blend-mode: multiply;
+	background-color: #7aadff;
+	
+	left:center;
+	width: 81%;
+	
+	transition: 1s;
+}
+
+.text{
+	font-family: 'Rosa', serif;
+	text-align: center;
+	color: white;
+	font-size: 3em;
+	left:40%;
+	z-index: 2;
+	margin-top: -5%;
+	transition: 1s;
+
+	
+
+
+}
+@media only screen and  (max-width: 1100px){
+	.text{
+		font-size:0.5em;
+	}
+
+}
+.text_hover{
+	font-family: 'Rosa', serif;
+	text-align: center;
+	color: white;
+	font-size: 3em;
+	left:40%;
+	z-index: 2;
+	transition: 1.5s;
+	transform: translateY(30vh);
+}
+	
+.nav{
+	margin-top: -7.5%;
+	position: sticky;
+	width: 100%;
+	height: 7.5%;
+	top:-7.5%;
+	z-index: 155;
+	background-color: #6ca4f7; 
+	transition: 0.5s;
+	transition: 1s;
+	text-align: center;
+	color:white;
+}
+.nav:hover{
+	transform: translateY(80%);
+}
+.nav_text{
+	position: relative;
+	display: block;
+	padding-top: 2%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.nav_text a{
+	
+	display: inline;
+		padding-top: 3.5%;
+		padding-bottom: 5%;
+	padding-right: 5%;
+	padding-left: 5%;
+	height: 100%;
+}
+.nav_text a:hover{
+	background-color: #006293;
+}
+.humb_top span{
+	position: absolute;
+	width: 2px;
+	top:95%;
+	height: 25px;
+	background-color: #fcf9f9;
+	left:49.5%;
+}
+.humb_top span::after{
+	content: '';
+	position: absolute;
+	width: 2px;
+	margin-top: 15px;
+	margin-left: 5px;
+	
+	height: 12.5px;
+	background-color: #fcf9f9;
+	
+	transform: rotate(45deg);
+	transition: 1s;
+	
+
+}
+.humb_top span::before{
+		content: '';
+	position: absolute;
+	width: 2px;
+	margin-top: 15px;
+	margin-left: -5px;
+	height: 12.5px;
+	background-color: #fcf9f9;
+	
+	transform: rotate(-45deg);
+	transition: 1s;
+
+	
+}
+.nav:hover .humb_top span::before{
+	content: '';
+	transform: rotate(45deg);
+	margin-top: 0px;
+}
+.nav:hover .humb_top span::after{
+	content: '';
+	transform: rotate(-45deg);
+	margin-top: 0px;
+}
+.humb_top span{
+	
+}
+.login{
+
+	
+	display: flex;
+	height: 20%;
+	justify-content: center;
+	align-items: center;
+	padding-left: 1%;
+	background-color:#6ca4f7; 
+	position: fixed;
+	right: 12.5%;
+	top:5%;
+	min-width: 15%;
+	box-shadow: 0px 0px 25px #6ca4f7;
+	transition: 1s;
+	z-index: 9;
+	border-radius:3px;
+	transform: translateX(1000px);
+}
+.login form{
+	width: 100%;
+	left: 0;
+	position: absolute;
+	
+}
+.login input{
+	 height:25px;
+    padding-left:10px;
+	font-family: cursive;
+    border:none;
+    border-radius:3px;
+	transition:0.5s; 
+	margin-top: 2vh;
+	width: 80%;
+	margin-left: 10%;
+
+}
+.login input [id="login"]{
+	position: absolute;
+	
+}
+.login button{
+	color: #fcf9f9;
+	display: block;
+	background-color: #184691;
+	border:solid 0.5px #0061ff;
+
+	font-family: cursive;
+	position: relative;
+	margin-top: 2vh;
+	display: flex;
+	width: 50%;
+	left: 25%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 4px;
+
+}
+.login button:hover{
+	background-color: #bcd5ff;
+}
+.login span{
+	text-align: center;
+	font-size: 1em;
+	position: absolute;
+	display: inline;
+	top:2%;
+
+}
+.login a [id = 'register']{
+	position: absolute;
+	text-align: center;
+	display: inline;
+	font-size: 1em;
+
+	bottom: -7.5%;
+}
+.login a[id = 'welcome']{
+	position: absolute;
+	display: block;
+	top: 10%;
+}
+.login a[id = 'exit']{
+	position: absolute;
+	display: block;
+	bottom: 0;
+}
+
+
+.header_bottom{
+	left: 20%;
+	top: 4%;
+	
+	position: absolute;
+	display: flex;
+	height: 10vh;
+	width:60vw;
+	background-color: #b3b5b7;
+	border-radius: 15px;
+	transition: 0.5s;
+	
+}
+.menu_button{
+	text-align: center;
+	background-color: #6ca4f7;
+	color: white;
+	position: fixed;
+	display: block;
+	z-index: 9;
+	width: 50px;
+	height: 4.5%;
+	top:5%;
+	right: 9%;
+	box-shadow: 0px 0px 50px #6ca4f7;
+	transition: 1s;
+
+}
+.menu_button span,
+.menu_button span::before{
+	top:50%;
+	left: 40%;
+	margin-left: -8.75px;
+	width: 2px;
+	height: 17.5px;
+	position: absolute;
+	background-color: #fcf9f9;
+	margin-top: -1px;
+	transition: 1s;
+}
+.menu_button span::before{
+	content: '';
+}
+.humb_reg span::before{
+	
+	
+	transform: translateY(-17.5px) translateX(16.5px) rotate(90deg);
+}
+.menu_button span{
+	transform: rotate(-45deg);
+}
+
+
+.humb_reg_active span{
+
+	transform: translateY(-12px) rotate(140deg);
+}
+.menu_button_active{
+	transform: translateX(-15px);
+}
+.login_active{
+	transform: translateX(5px);
+
+}
+
+.leftcol{
+
+	text-decoration: none;
+	z-index: 75;
+	position: fixed;	
+	width: 10%;
+	height: 100vh;
+	background: #6ca4f7;	
+	transition: 0.5s;
+	color:#fcf9f9;	
+	overflow: hidden;
+	
+}
+
+
+
+
+.leftcol:hover{
+	width:15%;
+	z-index:10;
+	
+
+}
+.leftcol span{
+	width:100%;
+	left:-15%;
+	padding-left: 50px;
+	cursor: pointer;
+	
+	
+
+}
+.leftcol span:hover{
+	margin-left: 10px;
+	transition: 0s;
+	background-color: #006293;
+
+}
+.leftcol p[id="menu_left"]{
+	left:30%;
+	position: absolute;
+	transition: 0.5s;
+}
+.leftcol:hover p[id="menu_left"]{
+	transition: 0.5s;
+	
+	transform: translateX(-12vw);
+}
+
+.leftcol span[id="1_left"]{
+	top:5%;
+}
+.leftcol span[id="1_left"]{
+	
+	position: absolute;
+	transform: translateX(-200px);
+	transition: 0.7s;
+}
+.leftcol:hover span[id="1_left"]{
+
+	transition: 0.5s;
+	transform: translateX(20px);
+}
+.leftcol span[id="2_left"]{
+	top:10%;
+}
+.leftcol span[id="2_left"]{
+	
+	position: absolute;
+	transform: translateX(-200px);
+	transition: 0.8s;
+}
+.leftcol:hover span[id="2_left"]{
+
+	transition: 0.7s;
+	transform: translateX(20px);
+}
+.leftcol span[id="3_left"]{
+	top:15%;
+}
+.leftcol span[id="3_left"]{
+	
+	position: absolute;
+	transform: translateX(-200px);
+	transition: 0.9s;
+}
+.leftcol:hover span[id="3_left"]{
+
+	transition: 0.9s;
+	transform: translateX(20px);
+}
+.leftcol span[id="4_left"]{
+	top:20%;
+}
+.leftcol span[id="4_left"]{
+	
+	position: absolute;
+	transform: translateX(-200px);
+	transition: 0.7s;
+}
+.leftcol:hover span[id="4_left"]{
+
+	transition: 1.1s;
+	transform: translateX(20px);
+}
+.leftcol span[id="5_left"]{
+	top:25%;
+}
+.leftcol span[id="5_left"]{
+	
+	position: absolute;
+	transform: translateX(-200px);
+	transition: 0.5s;
+}
+.leftcol:hover span[id="5_left"]{
+
+	transition: 1.3s;
+	transform: translateX(20px);
+}
+
+.under_header, .under_header_1, .under_header_2, .under_header_3{
+	z-index: 3;
+	left: 10%;
+	
+	position: absolute;
+	display: flex;
+	height: 10vh;
+	width:80vw;
+	background-color: #68bed6;
+	color:#fcf9f9;
+
+}
+.under_header{
+	top:84%;
+}
+.under_header_1{
+	top:168%;
+}
+.under_header_2{
+	top:252%;
+}
+.under_header_3{
+	top:336%;
+}
+
+
+.under_header a, .under_header_1 a, .under_header_2 a, .under_header_3 a{
+	font-size: 2em;
+	bottom:0;
+	position: absolute;
+	left:6%;
+
+}
+
+
+.news{
+
+	width: 100%;
+	height: 80vh;
+	position: absolute;
+	background: url(https://images6.alphacoders.com/712/thumb-1920-712764.jpg) #7aadff;
+	top:90vh;
+	background-size: cover;
+	background-position: top;
+	transition: 1s;
+	background-blend-mode: multiply;
+}
+
+#id1 {
+	position: absolute;
+}
+
+
+
+.news_text{
+
+	left:20%;
+	position: absolute;
+	width: 60%;
+	z-index: 5;
+	top:10%;
+	text-align: center;
+	transition: 1s;
+	
+	color:#fcf9f9;
+}
+
+
+
+.blog{
+	z-index: 2;
+	width: 100%;
+	height: 80%;
+	position: absolute;
+	background: url(https://stmed.net/sites/default/files/celldweller-wallpapers-30296-1002745.jpg)  #7aadff; 
+	top:175vh;
+	background-blend-mode: multiply;
+	transition: 1s;
+}
+
+.blog_text{
+	left:20%;
+	position: absolute;
+	width: 60%;
+	z-index: 2;
+	top:185%;
+	text-align: center;
+	transition: 1s;
+	
+	color:#fcf9f9;
+}
+#iblog1, #iblog2, #iblog3{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+
+}
+#iblog2, #iblog3{
+	display: none;
+}
+
+.about{
+	z-index: 1.5;
+	width: 100%;
+	height: 80vh;
+	position: absolute;
+	background: url(http://www.wallpapermaiden.com/image/2016/09/14/celldweller-end-of-an-empire-sci-fi-music-character-bodysuit-others-5879.jpg)  #7aadff;
+	top:260vh;
+	background-blend-mode: multiply;
+	transition: 1s;
+}
+.about_text{
+	color: #fcf9f9;
+	margin-top: 5%;
+	margin-left: 20%;
+	width: 60%;
+	left:20%;
+}
+.contact{
+	z-index: 1.6;
+	width: 100%;
+	height: 50vh;
+	position: absolute;
+	background: url(https://images6.alphacoders.com/712/thumb-1920-712764.jpg) #7aadff;
+	top:340vh;
+	background-blend-mode: multiply;
+	transition: 1s;
+}
+.contact_text{
+	color: #fcf9f9;
+	margin-top: 5%;
+	margin-left: 12%;
+
+}
+
+
+.rightcol{
+
+	text-decoration: none;
+	color:#fcf9f9;	
+	z-index:10;
+	left:90%;
+	height: 100vh;
+	width: 10vw;
+	position: fixed;
+	background: #6ca4f7;
+	text-align: center;
+	padding-top:0.5%;
+}
+.rightcol a:hover{
+	cursor: pointer;
+
+	background-color: #006293;
+}
+}
+.rightcol p, span{
+	position: relative;
+
+}
+
+.hidden_news span, p{
+	
+
+	color:#fcf9f9;
+
+}
+.hidden_news hr{
+	width: 60%;
+}
+.hidden_news a{
+	position: relative;
+	display: block;
+	width: 100%;
+	margin-top: 5%;
+}
+
+
+
+.hidden_main{
+	padding-top: 10%;
+	display: block;
+	color:#fcf9f9;
+}
+.hidden_blog a{
+	position: relative;
+	display: block;
+	width: 100%;
+	
+	margin-top: 5%;
+
+}
+.hidden_blog_text{
+	text-align: center;
+
+}
+ .hidden_blog, .hidden_about, .hidden_cont, .hidden_news{
+ 	padding-top: 5%;
+	display: none;
+	color:#fcf9f9;
+	
+}
+.bottom_right{
+
+	width: 100%;
+	background: #238ba8;
+	font-size: 0.7em;
+	position: absolute;
+	bottom:0%;
+	
+	text-align: right;
+
+}
+.bottom_right strong{
+	position: relative;
+	display: block;
+	right: 5%;
+
+}
+
+.bottom_left{
+	width: 100%;
+	background: #238ba8;
+	font-size: 0.7em;
+	position: absolute;
+	bottom:0;
+}
+.bottom_left strong{
+	position: relative;
+	display: block;
+	left:5%;
+}
+.posting_time{
+	position: relative;
+	left: -30%;
+}
+.post_time{
+	margin-bottom: 5vh;
+	position: relative;
+	left: -30%;
+}
+.back{
+	color:#fcf9f9; 
+	top:5%;
+	left: 10%;
+	position: absolute;
+	width: 80%;
+	background-blend-mode: multiply;
+	background: url(https://hdqwalls.com/download/scandroid-digital-art-4k-u9-1920x1080.jpg) no-repeat #253568;
+	height: 90vh;
+	background-size: cover;
+	overflow-y: hidden;
+
+
+}
+.back_blog{
+	color:#fcf9f9; 
+	top:5%;
+	left: 10%;
+	position: absolute;
+	width: 80%;
+	background-blend-mode: multiply;
+	background: url(https://stmed.net/sites/default/files/celldweller-wallpapers-30296-7143322.jpg) no-repeat #253568;
+	height: 90vh;
+	background-size: cover;
+	overflow-y: hidden;
+
+
+}
+.white_line{
+	height: 5px;
+	position: relative;
+	left: 7.5%;
+	width: 85%;
+	margin-top: 5%;
+	background-color: #fcf9f9;
+	box-shadow: 0px 0px 15px white;
+}
+.allnews_back{
+	text-align: center;
+	position: absolute;
+	width: 100vw;
+	height: 150vh;
+	background-color: #6ca4f7;
+}
+
+.sticky{
+	top:0%;
+	position: sticky;
+	width: 81%;
+	height: 5%;
+	z-index: 3;
+	background-color: #6ca4f7;
+	margin-top: -2%;	
+	left: 10%;
+}
+.sticky span{
+	position: relative;
+		
+	width: 100%;
+	display: block;
+	
+	text-align: center;
+}
+
+.allnews_back a[id="main_from_news"]{
+	
+	display: block;
+	text-align: left;
+	top:1%;
+	
+	left: 5%;
+	position: sticky;
+
+
+}
+#main_from_news{
+	margin-top: 4%;
+	margin-left: 2.5%;
+}
+#to_start_all_news{
+
+	position: absolute;
+	right: 0;
+	top: 80vh;
+}
+#first_img{
+	display: inline;
+	position: relative;
+	right: 25%;
+}
+#img_back, #img_go{
+	position: absolute;
+	top:80vh;
+
+}
+#img_back{
+	left:52%;
+}
+#img_go{
+	left: 40%;
+}
+	
+
+.new_header{
+	position: relative;
+	text-align: center;
+	font-size: 2em;
+	font-family: 'Anton', sans-serif;
+
+}
+.allnews_text{
+font-family: 'Anton', sans-serif;
+	position: relative;
+	width: 80%;
+	left: 10%;
+	padding-top: 10%;
+}
+.to_end_all_news{
+	position: absolute;
+	display: block;
+	top: 80vh;
+}
+#first_img_end{
+	display: inline;
+	position: relative;
+	left:-25%;
+}
+.reg_back{
+	height: 100vh;
+	width: 100vw;
+	background: url(https://stmed.net/sites/default/files/styles/1920x1080/public/celldweller-wallpapers-30296-7985418.jpg?itok=MUBAOS5D)   no-repeat #253568;
+	background-blend-mode: multiply;
+	position: absolute;
+	color: #fcf9f9;
+	text-align: center;
+	padding-top: 5%;
+}
+.reg_form{
+	position: relative;
+	top:5%;
+	height: 35%;
+	width: 40%;
+	left: 30%;
+	background: #6ca4f7;
+	display: block;
+	padding-top: 10px;
+	box-shadow: 0px 0px 25px #00F;
+	overflow: hidden;
+	
+
+
+}
+.reg_form text{
+	position: absolute;
+	left: 20%;
+}
+.reg_form input, button{
+position: relative;
+	margin-top: 2%;
+
+	width: 30%;
+
+}
+.reg_form input{
+	height: 25px;
+	padding-left: 10px;
+	border: none;
+	border-radius: 2px;
+}
+.reg_form button{
+	color: #fcf9f9;
+	display: block;
+	background-color: #184691;
+	border:solid 0.5px #0061ff;
+	border-radius: 3px;
+	position: relative;
+	margin-top: 2vh;
+	display: flex;
+	width: 20%;
+	left: 40%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 4px;
+
+
+}
+.reg_form button:hover{
+	background-color: #bcd5ff;
+}
+.back_main{
+	position: absolute;
+	left:0%;
+	height: 100%;
+	width: 10%;
+	top:0;
+	background: #356afc;
+	opacity: 0.1;
+}
+.back_main img{
+	height: 25%;
+	top:37.5%;
+	position: relative;
+	transform: rotate(180deg);
+}
+.back_main:hover{
+	opacity: 0.6;
+}
+.back_main:hover img{
+	opacity: 1;
+}
+.celltext{
+	position: relative;
+	text-align: left;
+}
